@@ -5,6 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
+melanoma/
+nevus/
 
 # Distribution / packaging
 .Python
@@ -31,7 +33,7 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
-
+model.keras
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
