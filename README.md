@@ -18,7 +18,12 @@ modèle trop lourd pour etre present dans le repo (+100m)
 ## Utilisation (sans docker)
 ``` 
 pip install requirements.txt
-python app.py 
+python app.py
+```
+### for batch testing: 
+```
+cd test/
+python batch_test.py
 ```
 
 ##  Utilisation (via Docker)
