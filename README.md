@@ -16,14 +16,15 @@ Ce projet est une API Flask déployable via Docker, permettant de faire des pré
 modèle trop lourd pour etre present dans le repo (+100m)
 
 ## Utilisation (sans docker)
-```pip install requirements.txt
-python app.py
-
+``` 
+pip install requirements.txt
+python app.py 
+```
 
 ##  Utilisation (via Docker)
 
 ### 1. Construction de l'image
-
-```bash
+```
+bash
 docker build -t cbam-api .
-
+```
