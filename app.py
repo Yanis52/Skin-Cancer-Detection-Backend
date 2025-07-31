@@ -12,7 +12,7 @@ from mapping.class_mapping import class_label_map
 app = Flask(__name__)
 
 # Chargement du modèle 
-MODEL_PATH = "./model/model.keras"
+MODEL_PATH = "./model/model7.keras"
 model = tf.keras.models.load_model(MODEL_PATH, custom_objects={"AttentionBlock": AttentionBlock})
 
 
@@ -26,11 +26,12 @@ class_names = [
 IMG_SIZE = (128, 128)
 
 def preprocess_image(file):
-    image = Image.open(file).convert("RGB")
-    image = image.resize(IMG_SIZE)
-    img_array = np.array(image) / 255.0
-    img_array = np.expand_dims(img_array, axis=0)
+    img = Image.open(file).convert("RGB")
+    img = img.resize((128,128))
+    img_array = np.array(img)
+    img_array = np.expand_dims(img_array, axis=0)  # (1,128,128,3)
     return img_array
+
 
 # endpoint de base
 @app.route("/", methods=["GET"])
